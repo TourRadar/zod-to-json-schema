@@ -1,3 +1,4 @@
+import './zodExemplify';
 import { ZodFirstPartyTypeKind, ZodTypeDef } from "zod";
 import { JsonSchema7AnyType, parseAnyDef } from "./parsers/any.js";
 import { JsonSchema7ArrayType, parseArrayDef } from "./parsers/array.js";
@@ -48,12 +49,12 @@ type JsonSchema7Meta = {
   default?: any;
   description?: string;
   markdownDescription?: string;
+  examples?: any[];
 };
 
 export type JsonSchema7TypeUnion =
   | JsonSchema7StringType
   | JsonSchema7ArrayType
-  | JsonSchema7NumberType
   | JsonSchema7BigintType
   | JsonSchema7BooleanType
   | JsonSchema7DateType
@@ -113,8 +114,8 @@ const get$ref = (
   refs: Refs,
 ):
   | {
-      $ref: string;
-    }
+  $ref: string;
+}
   | {}
   | undefined => {
   switch (refs.$refStrategy) {
@@ -240,6 +241,9 @@ const addMeta = (
     if (refs.markdownDescription) {
       jsonSchema.markdownDescription = def.description;
     }
+  }
+  if((def as any).examples) {
+    jsonSchema.examples = (def as any).examples;
   }
   return jsonSchema;
 };

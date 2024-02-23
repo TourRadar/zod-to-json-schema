@@ -1,5 +1,5 @@
 import { z } from "zod";
-
+import '../src/zodExemplify';
 enum nativeEnum {
   "a",
   "b",
@@ -96,4 +96,4 @@ export const allParsersSchema = z
   })
   .partial()
   .default({ string: "hello" })
-  .describe("watup");
+  .describe("watup").exemplify({ string: "hello", null: null });
