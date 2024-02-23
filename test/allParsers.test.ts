@@ -1,4 +1,4 @@
-import { zodToJsonSchema } from "../src/zodToJsonSchema.js";
+import { zodToJsonSchema } from "../src";
 import { allParsersSchema } from "./allParsersSchema.js";
 import { suite } from "./suite.js";
 
@@ -325,6 +325,7 @@ suite("All Parsers tests", (test) => {
         string: "hello",
       },
       description: "watup",
+      examples: [{ string: "hello", null: null }]
     };
     assert(jsonSchema, expectedOutput);
   });
@@ -679,6 +680,7 @@ suite("All Parsers tests", (test) => {
         string: "hello",
       },
       description: "watup",
+      examples: [{ string: "hello", null: null }]
     };
     assert(jsonSchema, expectedOutput);
   });
