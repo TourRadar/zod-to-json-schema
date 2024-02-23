@@ -1,6 +1,6 @@
 {
   "name": "@tourradar/zod-to-json-schema",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Converts Zod schemas to Json Schemas",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/cjs/index.js",
@@ -75,31 +75,5 @@
   "homepage": "https://github.com/StefanTerdell/zod-to-json-schema#readme",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "balanced-match": "^1.0.2",
-    "brace-expansion": "^1.1.11",
-    "buffer-from": "^1.1.2",
-    "concat-map": "^0.0.1",
-    "esbuild": "^0.18.20",
-    "fast-deep-equal": "^3.1.3",
-    "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.3",
-    "get-tsconfig": "^4.7.2",
-    "glob": "^7.1.7",
-    "inflight": "^1.0.6",
-    "inherits": "^2.0.4",
-    "json-schema-traverse": "^1.0.0",
-    "minimatch": "^3.1.2",
-    "once": "^1.4.0",
-    "path-is-absolute": "^1.0.1",
-    "punycode": "^2.1.1",
-    "require-from-string": "^2.0.2",
-    "resolve-pkg-maps": "^1.0.0",
-    "source-map": "^0.6.1",
-    "source-map-support": "^0.5.21",
-    "undici-types": "^5.26.5",
-    "uri-js": "^4.4.1",
-    "wrappy": "^1.0.2"
   }
 }
